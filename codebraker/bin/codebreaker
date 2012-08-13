@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'codebreaker'
+
+=begin
+p 'File.expand_path(\'../../lib\') = ' + File.expand_path('../../lib')
+p '__FILE__ = ' + __FILE__
+p 'File.expand_path(\'../../lib\', __FILE__) = ' + File.expand_path('../../lib', __FILE__)
+=end
+game = Codebreaker::Game.new(STDOUT)
+game.start
+
